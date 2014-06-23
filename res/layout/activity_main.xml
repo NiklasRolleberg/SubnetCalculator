@@ -1,0 +1,155 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="niklas.subnetcalculator.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/IpAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="10dp"
+                android:ems="10" >
+
+                <requestFocus />
+            </EditText>
+
+
+
+            <CheckBox
+                android:id="@+id/checkBox_IpAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/IpAddress"
+                android:layout_alignBottom="@+id/IpAddress"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text="IpAddress" />
+
+            <Spinner
+                android:id="@+id/spinner_SubnetBits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Spinner_NetMask"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/Spinner_NetMask" />
+
+            <CheckBox
+                android:id="@+id/checkBox_SubnetBits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/spinner_SubnetBits"
+                android:layout_alignRight="@+id/checkBox_IpAddress"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Subnet Bits" />
+
+            <Spinner
+                android:id="@+id/spinner_MaskBits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/spinner_SubnetBits"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/spinner_SubnetBits" />
+
+            <CheckBox
+                android:id="@+id/checkBox_MaskBits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/spinner_MaskBits"
+                android:layout_alignRight="@+id/checkBox_SubnetBits"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Mask Bits" />
+
+            <Spinner
+                android:id="@+id/spinner_MaxSubnet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/spinner_MaskBits"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/spinner_MaskBits" />
+
+            <CheckBox
+                android:id="@+id/checkBox_MaxSubnet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/spinner_MaxSubnet"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"
+                android:layout_toLeftOf="@+id/IpAddress"
+                android:layout_marginTop="10dp"
+                android:text="Maximum Subnets" />
+
+            <Spinner
+                android:id="@+id/spinner_HostPerSubnet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/spinner_MaxSubnet"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/spinner_MaxSubnet" />
+
+            <CheckBox
+                android:id="@+id/checkBox_HostPerSubnet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/spinner_HostPerSubnet"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/checkBox_MaxSubnet"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Hosts per subnet" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/spinner_HostPerSubnet"
+                android:text="calculate" />
+
+            <Spinner
+                android:id="@+id/Spinner_NetMask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_alignLeft="@+id/IpAddress"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/IpAddress"
+                android:layout_marginTop="10dp"
+                android:ems="10" />
+
+            <CheckBox
+                android:id="@+id/checkBox_NetMask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Spinner_NetMask"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"
+                android:text="Net Mask" />
+
+        </RelativeLayout>
+        
+
+    </ScrollView>
+</FrameLayout>
+

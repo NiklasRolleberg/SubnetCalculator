@@ -1,0 +1,211 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="niklas.subnetcalculator.ResultActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+       <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+           <RelativeLayout
+       		android:layout_width="match_parent"
+        	android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IpAddress: " 
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textView_IP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Medium Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </RelativeLayout>
+            
+           
+           <RelativeLayout
+       		android:layout_width="match_parent"
+        	android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subnet Mask: " 
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textView_SubnetMask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Medium Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </RelativeLayout>
+            
+           
+			<RelativeLayout
+       		android:layout_width="match_parent"
+        	android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subnet Bits: " 
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textView_SubnetBits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Medium Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </RelativeLayout>
+           
+			
+			<RelativeLayout
+       		android:layout_width="match_parent"
+        	android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mask Bits " 
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textView_MaskBits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Medium Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </RelativeLayout>
+            
+			
+			<RelativeLayout
+       		android:layout_width="match_parent"
+        	android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maximum Subnets: " 
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textView_MaximumSubnets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Medium Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </RelativeLayout>
+            
+			
+			<RelativeLayout
+       		android:layout_width="match_parent"
+        	android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hosts per subnet " 
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textView_HostPerSubnet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Medium Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </RelativeLayout>
+            
+			<RelativeLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" >
+
+			    <TextView
+			        android:id="@+id/textviewHAR"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_centerHorizontal="true"
+			        android:text="Host Address Range "
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+			    <TextView
+			        android:id="@+id/textView_HostAddressRange"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/textviewHAR"
+			        android:layout_centerHorizontal="true"
+			        android:text="2-3"
+			        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+			</RelativeLayout>
+			
+			<RelativeLayout
+       		android:layout_width="match_parent"
+        	android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subnet ID:  " 
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textView_SubnetID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Medium Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </RelativeLayout>
+            
+			
+			<RelativeLayout
+       		android:layout_width="match_parent"
+        	android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Broadcast Address:  " 
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textView_BroadcastAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Medium Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </RelativeLayout>
+        </LinearLayout>
+		</ScrollView>
+    </RelativeLayout>
+</FrameLayout>
