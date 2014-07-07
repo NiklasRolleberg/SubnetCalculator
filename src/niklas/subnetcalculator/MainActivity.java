@@ -1,24 +1,18 @@
 package niklas.subnetcalculator;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.os.Build;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 	
 	private CheckBox ipBox;
 	private CheckBox netMaskBox;
@@ -41,13 +35,6 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//setContentView(R.layout.resultlayout);
-		/*
-		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}*/
-		
 		
 		/**Initiate all checkboxes and textfields etc.*/
 		
@@ -103,14 +90,64 @@ public class MainActivity extends ActionBarActivity {
         });
 	}
 	
-	
 	/**Check if data given is OK and calculate subnet stuff*/
 	private void Calculate() {
 		
-		/*Beräkna massa saker*/
+		// . = inget värde
+		String text_IpAddress = ".";
+		String text_NetMask = ".";
+		String text_SubnetBits = ".";
+		String text_MaskBits = ".";
+		String text_MaximumSubnets = ".";
+		String text_HostsPerSubnet = ".";
+		
+		boolean checkBox_IpAddress = ipBox.isChecked();
+		boolean checkBox_NetMask = netMaskBox.isChecked();
+		boolean checkBox_SubnetBits = subNetBitsBox.isChecked();
+		boolean checkBox_MaskBits = maskBitsBox.isChecked();
+		boolean checkBox_MaximumSubnets = maximumSubnetsBox.isChecked();
+		boolean checkBox_HostsPerSubnet = hostsPerSubnetBox.isChecked();
+		
+		if (checkBox_IpAddress)
+			text_IpAddress = ipAddress.getText().toString();
+		if (checkBox_NetMask)
+			text_NetMask = subnetMask.getSelectedItem().toString();
+		if (checkBox_SubnetBits)
+			text_SubnetBits = subnetBits.getSelectedItem().toString();
+		if (checkBox_MaskBits)
+			text_MaskBits = maskBits.getSelectedItem().toString();
+		if (checkBox_MaximumSubnets)
+			text_MaximumSubnets = maxSubNet.getSelectedItem().toString();
+		if (checkBox_HostsPerSubnet)
+			text_HostsPerSubnet = hostsPerSubnet.getSelectedItem().toString();
+		
+		/*Funkar
+		System.out.println(checkBox_IpAddress);
+		System.out.println(checkBox_NetMask);
+		System.out.println(checkBox_SubnetBits);
+		System.out.println(checkBox_MaskBits);
+		System.out.println(checkBox_MaximumSubnets);
+		System.out.println(checkBox_HostsPerSubnet);
+		
+		System.out.println(text_IpAddress);
+		System.out.println(text_NetMask);
+		System.out.println(text_SubnetBits);
+		System.out.println(text_MaskBits);
+		System.out.println(text_MaximumSubnets);
+		System.out.println(text_HostsPerSubnet);
+		*/
 		
 		
-		/*klar med beräkningar*/
+		/*Beräkna massa saker
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
+		
+		
+		/*Test*/
 		String Ip = "172.16.0.1";
 		String SubnetMask = "255.255.240.0";
 		String SubnetBits = "4";
@@ -124,6 +161,8 @@ public class MainActivity extends ActionBarActivity {
 		String HostAddressRange = "172.16.0.1-172.16.15.254";
 		String SubnetID = "172.16.0.0";
 		String BroadCastAddress = "172.16.15.255";
+		//
+		
 		
 		Intent myIntent = new Intent(this.getBaseContext(), ResultActivity.class);
 		
@@ -160,22 +199,4 @@ public class MainActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main, container,
-					false);
-			return rootView;
-		}
-	}
-
 }
